@@ -4,7 +4,7 @@ import './Inbox.css'
 const Inbox = () => {
     return (
         <>
-
+            Inbox
         </>
     )
 }
