@@ -1,8 +1,16 @@
-# React + Vite
+------------------------Pull
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+git switch -c [branch]
+git pull origin [branch]
+git pull
 
-Currently, two official plugins are available:
+------------------------Push
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+git push origin [branch]
+git add .
+git commit -m "Description"
+git push origin [branch]
+git push --set-upstream origin new
+git push
+
+
