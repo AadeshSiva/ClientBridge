@@ -1,12 +1,16 @@
-// Aadesh
-
 import './Inbox.css'
-const Inbox = () => {
+import Insidemenu from './InboxCOMPO/InSideMenu'
+import Inallchat from './InboxCOMPO/InAllChat'
+import Inchat from './InboxCOMPO/InChat'
+import { Outlet } from 'react-router-dom'
+
+export default function Inbox() {
     return (
         <>
-            Inbox
+            <main className="inboxmain">
+                <Insidemenu />
+                <Outlet/>
+            </main>
         </>
     )
 }
-
-export default Inbox
