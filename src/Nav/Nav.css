@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: "Outfit", system-ui;
+}
+
+/* =============================Running-Page============================== */
+
+.pg{
+   display: flex;
+   width: 100vw;
+   .right{
+    width: calc(100vw - 288px);
+    background-color: #f2f3f7;
+
+   }
+}
+
+/* ============================Side-bar=================================== */
+
+.side-bar{
+    height: 100vh;
+    width: 288px;
+    background-color: #0b0b45;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    .top{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 1em;
+        header{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1em;
+            img{
+                width: 40px;
+            }
+        }
+        
+        .sideContent{
+            padding-top: 1.5em;
+            ul{
+                li{
+                    display: flex;
+                    gap: 1em;
+                    list-style: none;
+                    a{
+                        font-weight: 300;
+                    font-size: 1.25em;
+                    text-decoration: none;
+                    color: white;
+                    }
+                    
+                    padding: 1em;
+                    border: 1px solid transparent;
+                }
+                li:hover{
+                    background-color: #232357;
+                    border: 1px solid #393967;
+                    border-radius: 15px;
+                    cursor: pointer;
+                    transition: background-color 0.3s ease, border 0.3s ease;
+                }
+            }
+        }
+    }
+    .Logout{
+        padding-bottom: 2em;
+        ul{
+            li{
+                display: flex;
+                gap: 1em;
+                align-items: center;
+                list-style: none;
+                padding-bottom: 1em;
+                font-weight: 300;
+                font-size: 1.25em;
+                cursor: pointer;
+            }
+        }
+    }
+  
+}
+
+
+
+/* ==============================TopNav=========================== */
+
+.topNav{
+   
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    .search-back{
+        display: flex;
+        align-items: center;
+        gap: 1em;
+        .search{
+            width: 400px;
+            height: 25px;
+            background-color: #f5f6fa;
+            border-radius: 50px;
+            display: flex;
+            gap: 10px;
+            padding: 10px;
+            img{
+                width: 20px;
+            }
+            input{
+                border: none;
+                outline: none;
+                background-color: transparent;
+            }
+        }
+    }
+    .profile{
+        display: flex;
+        align-items: center;
+        gap: 1em;
+    }
+}
