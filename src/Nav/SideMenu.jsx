@@ -1,15 +1,19 @@
 import React from "react";
 import "../Nav/Nav.css";
 import logo from "../assets/image/logo.svg";
-import dash from "../assets/svg/dash.svg";
-import registration from "../assets/svg/registration.svg";
-import inbox from "../assets/svg/inbox.svg";
-import list from "../assets/svg/list.svg";
-import transaction from "../assets/svg/transaction.svg";
-import setting from "../assets/svg/setting.svg";
-import logout from "../assets/svg/logout.svg";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+
+import { LuLayoutDashboard } from "react-icons/lu";
+import { MdOutlineAppRegistration } from "react-icons/md";
+import { AiOutlineMessage } from "react-icons/ai";
+import { GiWallet } from "react-icons/gi";
+import { IoShieldCheckmark } from "react-icons/io5";
+import { IoSettingsOutline } from "react-icons/io5";
+import { IoLogOutOutline } from "react-icons/io5";
+
 const SideMenu = () => {
+  const location = useLocation();
+  
   return (
     <div className="side-bar">
       <div className="top">
@@ -19,25 +23,40 @@ const SideMenu = () => {
         </header>
         <div className="sideContent">
           <ul>
-            <li>
-              <img src={dash} alt="dash" />
-              <Link to='/'>Dashboard</Link>
+            <li className={location.pathname === "/" ? "active" : ""}>
+              <div className="side"></div>
+              <Link className="ln" to="/">
+                <h2><LuLayoutDashboard/></h2>
+                <p>Dashboard</p>
+              </Link>
             </li>
-            <li>
-              <img src={registration} alt="registration" />
-              <Link to='/registration'>Registration</Link>
+            <li className={location.pathname === "/registration" ? "active" : ""}>
+              <div className="side"></div>
+              <Link className="ln" to="/registration">
+                <h2><MdOutlineAppRegistration /></h2>
+                <p>Registration</p>
+              </Link>
             </li>
-            <li>
-              <img src={inbox} alt="inbox" />
-              <Link to='/inbox'>Inbox</Link>
+            <li className={location.pathname === "/inbox" ? "active" : ""}>
+              <div className="side"></div>
+              <Link className="ln" to="/inbox">
+                <h2><AiOutlineMessage /></h2>
+                <p>Inbox</p>
+              </Link>
             </li>
-            <li>
-              <img src={list} alt="list" />
-              <Link to='/order'>Order List</Link>
+            <li className={location.pathname === "/order" ? "active" : ""}>
+              <div className="side"></div>
+              <Link className="ln" to="/order">
+                <h2><GiWallet /></h2>
+                <p>Order List</p>
+              </Link>
             </li>
-            <li>
-              <img src={transaction} alt="transaction" />
-              <Link to='/transaction'>Transaction</Link>
+            <li className={location.pathname === "/transaction" ? "active" : ""}>
+              <div className="side"></div>
+              <Link className="ln" to="/transaction">
+                <h2><IoShieldCheckmark /></h2>
+                <p>Transaction</p>
+              </Link>
             </li>
           </ul>
         </div>
@@ -45,11 +64,11 @@ const SideMenu = () => {
       <div className="Logout">
         <ul>
           <li>
-            <img src={setting} alt="setting" />
+            <h2><IoSettingsOutline /></h2>
             <p>Setting</p>
           </li>
           <li>
-            <img src={logout} alt="logout" />
+            <h2><IoLogOutOutline /></h2>
             <p>Log out</p>
           </li>
         </ul>

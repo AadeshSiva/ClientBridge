@@ -37,7 +37,7 @@ const ActiveProject = () => {
             </thead>
             <tbody>
                 {rows.map((details,index)=>(
-                    <tr>
+                    <tr key={index}>
                         <td className='first-col'>
                             <img src={orders} alt="" />
                             <p>{details.projectName}</p>   

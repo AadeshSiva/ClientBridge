@@ -8,6 +8,9 @@ import Inbox from "./Inbox/Inbox.jsx";
 import Order from "./OrderList/OrderList.jsx";
 import Registration from "./Registration/FreelancerReg/FreelancerReg.jsx";
 import Transaction from "./Transaction/Transaction.jsx";
+import Inallchat from './Inbox/InboxCOMPO/InAllChat'
+import Inchat from './Inbox/InboxCOMPO/InChat'
+
 const App = () => {
   return (
     <Router>
@@ -20,7 +23,12 @@ const App = () => {
         <Route path="/" element={<Dashboard />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/registration" element={<Registration />} />
-        <Route path="/inbox" element={<Inbox />} />
+        <Route path="/inbox" element={<Inbox />} >
+        <Route path='' element={<Inallchat />} />
+              <Route path='bin' element={<Inallchat />} />
+              <Route path='chat' element={<Inchat />} />
+        </Route>
+
         <Route path="/order" element={<Order />} />
         <Route path="/transaction" element={<Transaction />} />
       </Routes> 
